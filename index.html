@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crocodile Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crocodile Facts</h1>
+        <p id="fact"></p>
+        <button id="newFactButton">Get Random Fact</button>
+    </div>
+    <script>
+        const facts = [
+            {
+                "fact": "Ancient Species",
+                "description": "Crocodiles have existed for over 200 million years, making them one of the oldest living species on Earth."
+            },
+            {
+                "fact": "Cold-Blooded Reptiles",
+                "description": "Crocodiles are ectothermic (cold-blooded), meaning they rely on external sources to regulate their body temperature."
+            },
+            {
+                "fact": "Strong Bite Force",
+                "description": "They have one of the strongest bite forces in the animal kingdom, capable of exerting over 3,700 pounds of pressure per square inch."
+            },
+            {
+                "fact": "Excellent Swimmers",
+                "description": "Crocodiles are highly adapted for swimming, with a streamlined body and powerful tails that allow them to move quickly through water."
+            },
+            {
+                "fact": "Unique Communication",
+                "description": "They communicate using a variety of sounds, including hissing, growling, and even vocalizations that can be heard over long distances."
+            },
+            {
+                "fact": "Parental Care",
+                "description": "Unlike many reptiles, female crocodiles exhibit parental care, guarding their nests and helping hatchlings reach the water."
+            },
+            {
+                "fact": "Diverse Diet",
+                "description": "Crocodiles are carnivorous and have a varied diet that includes fish, birds, mammals, and even other reptiles."
+            },
+            {
+                "fact": "Habitat",
+                "description": "They are found in tropical and subtropical regions around the world, inhabiting rivers, lakes, wetlands, and sometimes brackish water."
+            },
+            {
+                "fact": "Color Change",
+                "description": "Crocodiles can change color based on their environment and temperature, often appearing darker when they are cold and lighter when they are warm."
+            },
+            {
+                "fact": "Longevity",
+                "description": "Crocodiles can live for several decades, with some species known to live over 70 years in the wild."
+            }
+        ];
+
+        document.getElementById('newFactButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const selectedFact = facts[randomIndex];
+            document.getElementById('fact').innerText = `${selectedFact.fact}: ${selectedFact.description}`;
+        });
+    </script>
+</body>
+</html>
